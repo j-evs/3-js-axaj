@@ -125,7 +125,7 @@ function getDataWithJqueryGet() {
     .done((users) => {
         usedMethodInfo.innerHTML = 'Loaded with $.get';
         displayUsersData(users);
-    })
+    });
 }
 
 function postDataWithJqueryPost() {
@@ -163,5 +163,5 @@ function postDataWithJqueryPost() {
         let parsedUsers = response['users[]'].map((user) => JSON.parse(user));
         usedMethodInfo.innerHTML = 'Posted with $.post';
         displayUsersData(parsedUsers);
-    })
+    });
 }
